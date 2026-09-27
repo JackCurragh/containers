@@ -33,6 +33,10 @@ jobs:
             context: orfrater
             image: translon-orfrater
             tag: 1.0.0
+          - name: translon-python
+            context: translon-python
+            image: translon-python
+            tag: 1.0.0
           - name: riborf
             context: riborf
             image: translon-riborf

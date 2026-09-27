@@ -10,6 +10,7 @@ pipeline.
 | `iribo` | `ghcr.io/jackcurragh/translon-iribo` |
 | `orfquant` | `ghcr.io/jackcurragh/translon-orfquant` |
 | `orfrater` | `ghcr.io/jackcurragh/translon-orfrater` |
+| `translon-python` | `ghcr.io/jackcurragh/translon-python` |
 | `riborf` | `ghcr.io/jackcurragh/translon-riborf` |
 | `ribotie` | `ghcr.io/jackcurragh/translon-ribotie` and `translon-ribotie-cuda` |
 | `gedi-price` | GEDI/PRICE support image |

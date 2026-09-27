@@ -2,7 +2,7 @@ FROM python:3.11-slim
 ARG PLASTID_COMMIT=d97f239d73b3a7c2eff46f71928b777431891f90
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends bedtools git build-essential \
+    && apt-get install -y --no-install-recommends bedtools git build-essential procps \
        zlib1g-dev libbz2-dev liblzma-dev libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
