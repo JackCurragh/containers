@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir 'setuptools<81' \
     && find plastid -type f \( -name '*.py' -o -name '*.pyx' \) -exec sed -i -E 's/(numpy|np)\.(int|float|bool)\b/\2/g' {} + \
     && sed -i -e 's/sd = NULL/sd = -1/g' -e 's/ci->socket = NULL/ci->socket = -1/g' kent/src/lib/udc.c \
     && python setup.py build_ext --recythonize --inplace \
-    && pip install --no-cache-dir --no-build-isolation . \
+    && pip install --no-cache-dir --no-build-isolation --no-deps . \
     && pip install --no-cache-dir 'setuptools<81'
 
 ENV ORFRATER_HOME=/opt/orfrater
