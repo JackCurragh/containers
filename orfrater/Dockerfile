@@ -22,3 +22,4 @@ RUN pip install --no-cache-dir 'setuptools<81' \
 
 ENV ORFRATER_HOME=/opt/orfrater
 ENV PYTHONPATH=/opt/orfrater
+ENV PYTHONNOUSERSITE=1
