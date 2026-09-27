@@ -24,26 +24,33 @@ jobs:
           - name: iribo
             context: iribo
             image: translon-iribo
+            tag: 1.0.0
           - name: orfquant
             context: orfquant
             image: translon-orfquant
+            tag: 1.1.0-txdbmaker2
           - name: orfrater
             context: orfrater
             image: translon-orfrater
+            tag: 1.0.0
           - name: riborf
             context: riborf
             image: translon-riborf
+            tag: 1.0.0
           - name: ribotie
             context: ribotie
             file: Dockerfile
             image: translon-ribotie
+            tag: 1.0.0
           - name: ribotie-cuda
             context: ribotie
             file: Dockerfile.cuda
             image: translon-ribotie-cuda
+            tag: 1.0.0
           - name: gedi-price
             context: gedi-price
             image: translon-gedi-price
+            tag: 1.0.0
 
     runs-on: ubuntu-latest
     steps:
@@ -63,7 +70,7 @@ jobs:
           images: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}
           tags: |
             type=ref,event=tag
-            type=raw,value=${{ inputs.version }},enable=${{ github.event_name == 'workflow_dispatch' }}
+            type=raw,value=${{ matrix.tag }},enable=${{ github.event_name == 'workflow_dispatch' }}
 
       - uses: docker/build-push-action@v6
         with:
