@@ -2,6 +2,7 @@
 # 5ae4cd69fc845e811e9c978ddbe48b706a071061.
 numpy==1.26.4
 matplotlib==3.9.2
+termcolor==2.4.0
 cython==0.29.37
 scipy==1.13.1
 pandas==2.2.2
